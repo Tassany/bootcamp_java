@@ -70,6 +70,9 @@ export default function CadastrarInvestimento(){
                     <Menu.Item key="2">
                         <Link to="/listar-investimento">Listar Investimento</Link>
                     </Menu.Item>
+                    <Menu.Item key="3">
+                        <Link to="/cadastrar-categoria">Cadastrar categoria</Link>
+                    </Menu.Item>
                 </Menu>
             </Header>
                 <Content style={{ padding: '0 50px' }}>
