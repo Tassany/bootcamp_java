@@ -8,7 +8,7 @@ Respositório criado para armazenar o trabalho realizado no bootcamp de spring/j
 
 ![cadastro_investimentos](cadastrar_investimento.png "Tela de cadastro de investimentos")
 
-![listar_investimentos](listar_investimento.png "Tela de listagem de investimentos já feitos.")
+![listar_investimentos](listar_investimentos.png "Tela de listagem de investimentos já feitos")
 
 ## Algumas intruções
 
