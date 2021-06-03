@@ -12,6 +12,14 @@ Respositório criado para armazenar o trabalho realizado no bootcamp de spring/j
 
 ## Algumas intruções
 
+### Caso não funcione ao clonar o projeto...
+ Retire o node-modules: rm -rf node_modules
+
+ Instale novamente: npm install
+
+ Rode novamente com: npm start
+ 
+
 sudo apt install openjdk-11-jdk
 java -version
 sudo update-alternatives --config java
