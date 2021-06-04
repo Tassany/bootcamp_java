@@ -1,14 +1,34 @@
 
 import "antd/dist/antd.css";
-
+import {useState, useEffect} from 'react';
 import { Layout, Menu, Button,message, DatePicker,Input, InputNumber, Form, Select} from 'antd';
 import {Link} from 'react-router-dom';
 import CategoriaService from "../../service/CategoriaService";
 const { Header, Content, Footer } = Layout;
+
 const { Option } = Select;
 
-export default function CadastrarCategoria(){
 
+export default function CadastrarCategoria(){
+    const [categorias, setCategorias] = useState([]);
+    const [categoria, setCategoria] = useState(null);
+
+    useEffect(() => {
+        refreshCategorias();
+        return () => {
+            
+        }
+    }, [])
+
+    async function refreshCategorias(){
+        CategoriaService.retriveAllCategorias()
+            .then(
+                response => {
+                    setCategorias(response.data)
+                }
+            )
+        
+    }
 
     const layout = {
         labelCol: { span: 4 },
@@ -25,7 +45,7 @@ export default function CadastrarCategoria(){
     }
 
     function handleChange(value){
-        
+        setCategoria(value);
     }
     return(
         <div className="container">
@@ -46,7 +66,7 @@ export default function CadastrarCategoria(){
         </Header>
             <Content style={{ padding: '0 50px' }}>
             <div className="site-layout-content">
-                <h2>CADASTRAR INVESTIMENTOS</h2>
+                <h2>CADASTRAR CATEGORIAS</h2>
                 <Form {...layout} name="basic"
                 initialValues={{
                     remenber:true,
